@@ -1,0 +1,154 @@
+﻿@charset "UTF-8";
+
+body
+{
+	font-family: "ＭＳ Ｐゴシック";
+	font-size: 1.0em;
+	line-height: 1.0em;
+	color: #BBB;
+	background-color: #333;
+}
+
+h1
+{
+	font-size: 2.0em;
+}
+
+a
+{
+	text-decoration: none;
+	color: #DDD;
+}
+
+.normallink:hover
+{
+	background-color: #555;
+}
+
+.minorlink
+{
+	text-decoration: none;
+	color: #660;
+}
+
+.minorlink:hover
+{
+	color: #FF0;
+}
+
+.rack
+{
+	width: 72em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.mainwindow
+{
+	width: auto;
+	height: 36em;
+	border-style: solid;
+	border-width: 0.3em;
+	border-color: #660;
+	padding: 0.3em;
+	overflow-y: scroll;
+}
+
+.mainwindow td
+{
+	padding: 0.3em 0.3em;
+}
+
+.date
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.subwindow
+{
+	width: 35em;
+}
+
+.subwindow td
+{
+	padding: 0.3em 0.3em;
+}
+
+.blogtitle
+{
+	font-weight: bold;
+	padding: 0.5em;
+	color: #DDD;
+	background-color: #660;
+}
+
+body::-webkit-scrollbar
+{
+	background: #111;
+}
+
+body::-webkit-scrollbar-button
+{
+	background: #555;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background: #888;
+}
+
+.mainwindow::-webkit-scrollbar
+{
+	background: #111;
+}
+
+.mainwindow::-webkit-scrollbar-button
+{
+	background: #555;
+}
+
+.mainwindow::-webkit-scrollbar-thumb
+{
+	background: #888;
+}
+
+.menu_general
+{
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5em;
+	width: 15em;
+	background: #800;
+}
+
+.menu_news
+{
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5em;
+	width: 15em;
+	background: #007;
+}
+
+.menu_anime
+{
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5em;
+	width: 15em;
+	background: #660;
+}
+
+.menu_other
+{
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5em;
+	width: 15em;
+	background: #060;
+}

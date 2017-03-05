@@ -1,6 +1,4 @@
-﻿#if true
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,13 +8,13 @@ using System.Text;
 
 namespace OitAntennaKai
 {
-    internal class LocalTest
+    internal class BlogCache
     {
         private static readonly char[] uriSeparator = new[] { '/' };
 
         private static readonly string cacheDirectory;
 
-        static LocalTest()
+        static BlogCache()
         {
             var assembly = Assembly.GetEntryAssembly();
             var directory = Path.GetDirectoryName(assembly.Location);
@@ -65,5 +63,3 @@ namespace OitAntennaKai
         }
     }
 }
-
-#endif

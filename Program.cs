@@ -10,10 +10,18 @@ namespace OitAntennaKai
     {
         private static void Main(string[] args)
         {
-            var rssList = File.ReadLines("rsslist\\anime.txt").ToArray();
-            var blogs = rssList.Select(uri => LocalTest.GetBlogFromRssUri(uri)).ToArray();
-            var category = new Category("test", blogs, true);
-            HtmlPage.CreateMainPage(@"C:\Users\Sinshu\Desktop\test.html", category);
+            {
+                var category = new Category("general");
+                category.CreateHtmlFile(true);
+            }
+            {
+                var category = new Category("news");
+                category.CreateHtmlFile(true);
+            }
+            {
+                var category = new Category("anime");
+                category.CreateHtmlFile(true);
+            }
         }
     }
 }

@@ -42,6 +42,10 @@ namespace OitAntennaKai
             uri = GetUri(document);
             title = GetTitle(document);
             articles = EnumerateArticles(this, document).OrderByDescending(article => article.Date).ToList();
+            if (articles.Count == 0)
+            {
+                throw new Exception("記事の取得に失敗しました。");
+            }
             stats = new Stats(this);
         }
 

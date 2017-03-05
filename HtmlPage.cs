@@ -10,16 +10,17 @@ namespace OitAntennaKai
     {
         private static readonly string daysOfWeek = "日月火水木金土";
 
-        public static void CreateMainPage(string path, Category category)
+        public static void CreateMainPage(string path, Book book)
         {
             using (var writer = new StreamWriter(path, false, Encoding.UTF8))
             {
                 BeginHtml(writer);
-                WriteHeader(writer, Setting.PageTitle);
+                WriteHeader(writer, Setting.PageTitle, Path.GetFileNameWithoutExtension(path) + ".css");
                 BeginBody(writer);
                 WriteTitle(writer);
-                WriteMainWindow(writer, category);
-                WriteSubWindows(writer, category);
+                WriteMenu(writer);
+                WriteMainWindow(writer, book);
+                WriteSubWindows(writer, book);
                 EndBody(writer);
                 EndHtml(writer);
             }
@@ -36,12 +37,12 @@ namespace OitAntennaKai
             writer.WriteLine("</html>");
         }
 
-        private static void WriteHeader(StreamWriter writer, string title)
+        private static void WriteHeader(StreamWriter writer, string title, string cssPath)
         {
             writer.WriteLine("<head>");
             writer.WriteLine("<meta charset=\"UTF-8\">");
             writer.WriteLine("<title>" + title + "</title>");
-            writer.WriteLine("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
+            writer.WriteLine("<link rel=\"stylesheet\" type=\"text/css\" href=\"" + cssPath + "\">");
             writer.WriteLine("</head>");
         }
 
@@ -70,6 +71,11 @@ namespace OitAntennaKai
             return "<a class=\"" + cssClass + "\" title=\"" + Escape(title) + "\"  href=\"" + Escape(href) + "\" target=\"_blank\">" + Escape(text) + "</a>";
         }
 
+        private static string CreateLink_DoNotOpenNewWindow(string text, string href)
+        {
+            return "<a href=\"" + Escape(href) + "\">" + Escape(text) + "</a>";
+        }
+
         private static string CreateLink_NoEscapeForTitle(string text, string title, string href, string cssClass)
         {
             return "<a class=\"" + cssClass + "\" title=\"" + title + "\"  href=\"" + Escape(href) + "\" target=\"_blank\">" + Escape(text) + "</a>";
@@ -86,13 +92,23 @@ namespace OitAntennaKai
             writer.WriteLine("</div>");
         }
 
-        private static void WriteMainWindow(StreamWriter writer, Category category)
+        private static void WriteMenu(StreamWriter writer)
+        {
+            writer.WriteLine("<div class=\"rack\">");
+            writer.WriteLine("<div class=\"menu_general\">" + CreateLink_DoNotOpenNewWindow("一般", "general.html") + "</div>");
+            writer.WriteLine("<div class=\"menu_news\">" + CreateLink_DoNotOpenNewWindow("ニュース", "news.html") + "</div>");
+            writer.WriteLine("<div class=\"menu_anime\">" + CreateLink_DoNotOpenNewWindow("サブカル", "anime.html") + "</div>");
+            writer.WriteLine("<div class=\"menu_other\">" + CreateLink_DoNotOpenNewWindow("考え中", "other.html") + "</div>");
+            writer.WriteLine("</div>");
+        }
+
+        private static void WriteMainWindow(StreamWriter writer, Book book)
         {
             writer.WriteLine("<div class=\"rack\">");
             writer.WriteLine("<div class=\"mainwindow\">");
             writer.WriteLine("<table>");
             var lastDay = 0;
-            foreach (var bundle in category.Bundles)
+            foreach (var bundle in book.Bundles)
             {
                 if (bundle.Articles[0].Date.Day != lastDay)
                 {
@@ -127,9 +143,9 @@ namespace OitAntennaKai
             writer.WriteLine("</tr>");
         }
 
-        private static void WriteSubWindows(StreamWriter writer, Category category)
+        private static void WriteSubWindows(StreamWriter writer, Book book)
         {
-            foreach (var pair in category.OrderByUnko().Take(20).Buffer(2))
+            foreach (var pair in book.OrderByUnko().Take(20).Buffer(2))
             {
                 writer.WriteLine("<div class=\"rack\">");
                 foreach (var blog in pair)
