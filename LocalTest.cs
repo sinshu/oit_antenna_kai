@@ -1,4 +1,4 @@
-﻿#if DEBUG
+﻿#if true
 
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 
 namespace OitAntennaKai
 {
-    class LocalTest
+    internal class LocalTest
     {
         private static readonly char[] uriSeparator = new[] { '/' };
 

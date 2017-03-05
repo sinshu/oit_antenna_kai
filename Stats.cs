@@ -7,6 +7,7 @@ namespace OitAntennaKai
     internal class Stats
     {
         private Blog blog;
+        private int accessFailureCount;
         private double articlesPerDay;
         private int articleCount;
         private int bundleCount;
@@ -14,6 +15,7 @@ namespace OitAntennaKai
         internal Stats(Blog blog)
         {
             this.blog = blog;
+            accessFailureCount = 0;
             Reset();
         }
 
@@ -26,6 +28,11 @@ namespace OitAntennaKai
             bundleCount = 0;
         }
 
+        public void IncreaseAccessFailureCount()
+        {
+            accessFailureCount++;
+        }
+
         public void IncreaseArticleCount()
         {
             articleCount++;
@@ -34,6 +41,14 @@ namespace OitAntennaKai
         public void IncreaseBundleCount()
         {
             bundleCount++;
+        }
+
+        public int AccessFailureCount
+        {
+            get
+            {
+                return accessFailureCount;
+            }
         }
 
         public double ArticlesPerDay
@@ -63,7 +78,9 @@ namespace OitAntennaKai
         {
             get
             {
-                return Math.Min(articlesPerDay, 3) / 3 - BundleRatio;
+                const int n = 3;
+                var omake = Math.Max(articlesPerDay - n, 0) / 10000;
+                return Math.Min(articlesPerDay, n) / n - BundleRatio + omake;
             }
         }
     }

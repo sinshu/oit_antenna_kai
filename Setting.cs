@@ -4,7 +4,8 @@ using System.Linq;
 
 namespace OitAntennaKai
 {
-    public class Setting
+    public static class Setting
     {
+        public static readonly string PageTitle = "OITあんてな(改)";
     }
 }

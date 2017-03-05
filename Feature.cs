@@ -28,10 +28,20 @@ namespace OitAntennaKai
             {
                 return 999;
             }
+            if (Math.Abs(feature.length - length) >= 10) return 999;
             var count = 0;
             for (var i = 0; i < 256; i++)
             {
-                count += Math.Abs(feature.histogram[i] - histogram[i]);
+                var value1 = histogram[i];
+                var value2 = feature.histogram[i];
+                if (value1 < value2)
+                {
+                    count += value2 - value1;
+                }
+                else
+                {
+                    count += value1 - value2;
+                }
             }
             return (double)count / Math.Max(length, feature.length);
         }

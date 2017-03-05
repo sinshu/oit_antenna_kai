@@ -18,7 +18,14 @@ namespace OitAntennaKai
             this.blog = blog;
             this.uri = uri;
             this.date = date;
-            this.title = title;
+            if (title.Length > 0)
+            {
+                this.title = title;
+            }
+            else
+            {
+                this.title = "無題";
+            }
 
             this.feature = new Feature(this);
         }
