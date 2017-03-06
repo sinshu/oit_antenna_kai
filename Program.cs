@@ -10,18 +10,15 @@ namespace OitAntennaKai
     {
         private static void Main(string[] args)
         {
+            var categories = new[]
             {
-                var category = new Category("general");
-                category.CreateHtmlFile(true);
-            }
-            {
-                var category = new Category("news");
-                category.CreateHtmlFile(true);
-            }
-            {
-                var category = new Category("anime");
-                category.CreateHtmlFile(true);
-            }
+                new Category("general"),
+                new Category("news"),
+                new Category("anime"),
+                new Category("other")
+            };
+            categories.ForEach(category => category.CreateHtmlFile(category.ID != "other"));
+            HtmlLogPage.CreateLogPage(Path.Combine(Setting.OutputDirectory, "stats.html"), categories);
         }
     }
 }

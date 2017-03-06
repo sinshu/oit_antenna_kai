@@ -72,6 +72,14 @@ namespace OitAntennaKai
             }
         }
 
+        public string Uri
+        {
+            get
+            {
+                return uri;
+            }
+        }
+
         public Blog Blog
         {
             get

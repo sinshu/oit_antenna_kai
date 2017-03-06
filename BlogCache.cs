@@ -12,19 +12,10 @@ namespace OitAntennaKai
     {
         private static readonly char[] uriSeparator = new[] { '/' };
 
-        private static readonly string cacheDirectory;
-
-        static BlogCache()
-        {
-            var assembly = Assembly.GetEntryAssembly();
-            var directory = Path.GetDirectoryName(assembly.Location);
-            cacheDirectory = Path.Combine(directory, "cache");
-        }
-
         public static Blog GetBlogFromRssUri(string rssUri)
         {
             var name = GetShortNameFromUri(rssUri);
-            var cache = Path.Combine(cacheDirectory, name + ".xml");
+            var cache = Path.Combine(Setting.BlogCacheDirectory, name + ".xml");
             if (!File.Exists(cache))
             {
                 CacheBlog(rssUri);
@@ -43,12 +34,12 @@ namespace OitAntennaKai
 
         private static void CacheBlog(string rssUri)
         {
-            var name = GetShortNameFromUri(rssUri);
-            var cache = Path.Combine(cacheDirectory, name + ".xml");
-            if (!Directory.Exists(cacheDirectory))
+            if (!Directory.Exists(Setting.BlogCacheDirectory))
             {
-                Directory.CreateDirectory(cacheDirectory);
+                Directory.CreateDirectory(Setting.BlogCacheDirectory);
             }
+            var name = GetShortNameFromUri(rssUri);
+            var cache = Path.Combine(Setting.BlogCacheDirectory, name + ".xml");
             var request = WebRequest.Create(rssUri);
             using (var response = request.GetResponse())
             using (var stream = response.GetResponseStream())

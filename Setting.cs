@@ -8,12 +8,13 @@ namespace OitAntennaKai
 {
     public static class Setting
     {
-        public static readonly bool UseBlogCache = true;
+        public static readonly bool UseBlogCache = false;
 
         public static readonly string PageTitle = "OITあんてな(改)";
 
         public static readonly string RootDirectory;
         public static readonly string RssListDirectory;
+        public static readonly string BlogCacheDirectory;
         public static readonly string OutputDirectory;
 
         static Setting()
@@ -21,6 +22,7 @@ namespace OitAntennaKai
             var exePath = Assembly.GetEntryAssembly().Location;
             RootDirectory = Path.GetDirectoryName(exePath);
             RssListDirectory = Path.Combine(RootDirectory, "rsslist");
+            BlogCacheDirectory = Path.Combine(RootDirectory, "cache");
             OutputDirectory = Path.Combine(RootDirectory, "files");
         }
     }

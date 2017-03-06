@@ -5,8 +5,8 @@ body
 	font-family: "ＭＳ Ｐゴシック";
 	font-size: 1.0em;
 	line-height: 1.0em;
-	color: #BBB;
-	background-color: #333;
+	color: #606060;
+	background-color: #FFFFFF;
 }
 
 h1
@@ -16,24 +16,30 @@ h1
 
 a
 {
-	text-decoration: none;
-	color: #DDD;
+	text-decoration: inherit;
+	color: inherit;
+}
+
+a:hover
+{
+	text-decoration: underline;
 }
 
 .normallink:hover
 {
-	background-color: #555;
+	text-decoration: none;
+	background-color: #FFF8E1;
 }
 
 .minorlink
 {
-	text-decoration: none;
-	color: #660;
+	color: #FFECB3;
 }
 
 .minorlink:hover
 {
-	color: #FF0;
+	text-decoration: none;
+	color: #FFC107;
 }
 
 .rack
@@ -53,7 +59,7 @@ a
 	height: 36em;
 	border-style: solid;
 	border-width: 0.3em;
-	border-color: #660;
+	border-color: #FFECB3;
 	padding: 0.3em;
 	overflow-y: scroll;
 }
@@ -83,72 +89,65 @@ a
 {
 	font-weight: bold;
 	padding: 0.5em;
-	color: #DDD;
-	background-color: #660;
-}
-
-body::-webkit-scrollbar
-{
-	background: #111;
-}
-
-body::-webkit-scrollbar-button
-{
-	background: #555;
-}
-
-body::-webkit-scrollbar-thumb
-{
-	background: #888;
-}
-
-.mainwindow::-webkit-scrollbar
-{
-	background: #111;
-}
-
-.mainwindow::-webkit-scrollbar-button
-{
-	background: #555;
-}
-
-.mainwindow::-webkit-scrollbar-thumb
-{
-	background: #888;
+	background-color: #FFECB3;
 }
 
 .menu_general
 {
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #800;
+	background: #ffcdd2;
 }
 
 .menu_news
 {
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #007;
+	background: #BBDEFB;
 }
 
 .menu_anime
 {
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #660;
+	background: #FFECB3;
 }
 
 .menu_other
 {
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #060;
+	background: #C8E6C9;
+}
+
+.menu_general a
+{
+	display: block;
+	width: 100%;
+}
+
+.menu_news a
+{
+	display: block;
+	width: 100%;
+}
+
+.menu_anime a
+{
+	display: block;
+	width: 100%;
+}
+
+.menu_other a
+{
+	display: block;
+	width: 100%;
 }

@@ -17,7 +17,6 @@ namespace OitAntennaKai
         public void Add(Article article)
         {
             articles.Add(article);
-            articles.Sort((a1, a2) => DateTime.Compare(a2.Date, a1.Date));
         }
 
         public IReadOnlyList<Article> Articles

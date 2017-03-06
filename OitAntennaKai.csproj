@@ -51,9 +51,8 @@
     <Compile Include="Book.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Feature.cs" />
-    <Compile Include="HtmlPage.cs" />
+    <Compile Include="HtmlMainPage.cs" />
     <Compile Include="BlogCache.cs" />
-    <Compile Include="Ordering.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RssInfo.cs" />
@@ -74,6 +73,13 @@
     <Content Include="files\news.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="files\other.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="HtmlLogPage.cs" />
+    <Content Include="files\stats.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="rsslist\anime.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -81,6 +87,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="rsslist\news.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rsslist\other.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

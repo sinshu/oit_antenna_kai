@@ -28,18 +28,18 @@ a:hover
 .normallink:hover
 {
 	text-decoration: none;
-	background-color: #E3F2FD
+	background-color: #E8F5E9;
 }
 
 .minorlink
 {
-	color: #BBDEFB;
+	color: #C8E6C9;
 }
 
 .minorlink:hover
 {
 	text-decoration: none;
-	color: #2196F3
+	color: #4CAF50;
 }
 
 .rack
@@ -59,7 +59,7 @@ a:hover
 	height: 36em;
 	border-style: solid;
 	border-width: 0.3em;
-	border-color: #BBDEFB;
+	border-color: #C8E6C9;
 	padding: 0.3em;
 	overflow-y: scroll;
 }
@@ -89,7 +89,7 @@ a:hover
 {
 	font-weight: bold;
 	padding: 0.5em;
-	background-color: #BBDEFB;
+	background-color: #C8E6C9;
 }
 
 .menu_general

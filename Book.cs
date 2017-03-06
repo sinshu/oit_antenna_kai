@@ -21,13 +21,13 @@ namespace OitAntennaKai
             }
             else
             {
-                bundles = blogs.SelectMany(blog => blog.Articles.Select(article => new Bundle(article))).ToList();
+                bundles = blogs.SelectMany(blog => blog.Articles.Select(article => new Bundle(article))).Take(maxBundleCount).ToList();
                 bundles.Sort((x, y) => DateTime.Compare(y.Articles[0].Date, x.Articles[0].Date));
             }
             UpdateStats(this.blogs, bundles);
         }
 
-        public IEnumerable<Blog> OrderByUnko()
+        public IEnumerable<Blog> OrderByScore()
         {
             return blogs.OrderByDescending(blog => blog.Stats.Score);
         }

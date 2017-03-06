@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OitAntennaKai
 {
-    internal static class HtmlPage
+    internal static class HtmlMainPage
     {
         private static readonly string daysOfWeek = "日月火水木金土";
 
@@ -53,6 +53,7 @@ namespace OitAntennaKai
 
         private static void EndBody(StreamWriter writer)
         {
+            writer.WriteLine("<div class=\"rack\"><a href=\"stats.html\" target=\"_blank\">RSS取得状況</a></div>");
             writer.WriteLine("</body>");
         }
 
@@ -98,7 +99,7 @@ namespace OitAntennaKai
             writer.WriteLine("<div class=\"menu_general\">" + CreateLink_DoNotOpenNewWindow("一般", "general.html") + "</div>");
             writer.WriteLine("<div class=\"menu_news\">" + CreateLink_DoNotOpenNewWindow("ニュース", "news.html") + "</div>");
             writer.WriteLine("<div class=\"menu_anime\">" + CreateLink_DoNotOpenNewWindow("サブカル", "anime.html") + "</div>");
-            writer.WriteLine("<div class=\"menu_other\">" + CreateLink_DoNotOpenNewWindow("考え中", "other.html") + "</div>");
+            writer.WriteLine("<div class=\"menu_other\">" + CreateLink_DoNotOpenNewWindow("その他", "other.html") + "</div>");
             writer.WriteLine("</div>");
         }
 
@@ -145,7 +146,7 @@ namespace OitAntennaKai
 
         private static void WriteSubWindows(StreamWriter writer, Book book)
         {
-            foreach (var pair in book.OrderByUnko().Take(20).Buffer(2))
+            foreach (var pair in book.OrderByScore().Take(20).Buffer(2))
             {
                 writer.WriteLine("<div class=\"rack\">");
                 foreach (var blog in pair)
@@ -153,15 +154,29 @@ namespace OitAntennaKai
                     writer.WriteLine("<div class=\"subwindow\">");
                     writer.WriteLine("<div class=\"blogtitle\">" + CreateLink_NoEscapeForTitle(blog.Title, GetBlogStatsText(blog), blog.Uri, "blogtitle") + "</div>");
                     writer.WriteLine("<table>");
-                    foreach (var articles in blog.Articles.Take(10))
+                    var lastDay = 0;
+                    foreach (var article in blog.Articles.Take(10))
                     {
-                        writer.WriteLine("<tr><td>" + CreateLink(articles.Title, blog.Title, articles.Uri, "normallink") + "</td></tr>");
+                        if (article.Date.Day != lastDay)
+                        {
+                            writer.WriteLine("<tr><td class=\"date\" colspan=\"2\">" + GetDayText(article.Date) + "</td></tr>");
+                        }
+                        WriteSubWindowRow(writer, article);
+                        lastDay = article.Date.Day;
                     }
                     writer.WriteLine("</table>");
                     writer.WriteLine("</div>");
                 }
                 writer.WriteLine("</div>");
             }
+        }
+
+        private static void WriteSubWindowRow(StreamWriter writer, Article article)
+        {
+            writer.Write("<tr>");
+            writer.Write("<td>" + article.Date.ToString("HH:mm") + "</td>");
+            writer.Write("<td>" + CreateLink(article.Title, article.Blog.Title, article.Uri, "normallink") + "</td>");
+            writer.WriteLine("</tr>");
         }
 
         private static string GetBlogStatsText(Blog blog)

@@ -21,8 +21,8 @@ namespace OitAntennaKai
 
         public void Reset()
         {
-            var index = Math.Min(10, blog.Articles.Count - 1);
-            var count = index + 1;
+            var count = Math.Min(10, blog.Articles.Count);
+            var index = count - 1;
             articlesPerDay = count / (DateTime.Now - blog.Articles[index].Date).TotalDays;
             articleCount = 0;
             bundleCount = 0;

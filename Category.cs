@@ -28,7 +28,48 @@ namespace OitAntennaKai
         public void CreateHtmlFile(bool enableBundle)
         {
             var book = new Book(rssInfoList.Where(rss => rss.Blog != null).Select(rss => rss.Blog), enableBundle);
-            HtmlPage.CreateMainPage(outputFilePath, book);
+            HtmlMainPage.CreateMainPage(outputFilePath, book);
+        }
+
+        internal void DumpArticles(bool enableBundle)
+        {
+            var book = new Book(rssInfoList.Where(rss => rss.Blog != null).Select(rss => rss.Blog), enableBundle);
+            var path = Path.Combine(Setting.OutputDirectory, id + ".txt");
+            using (var writer = new StreamWriter(path))
+            {
+                foreach (var bundle in book.Bundles)
+                {
+                    if (bundle.Articles.Count == 1)
+                    {
+                        var article = bundle.Articles[0];
+                        writer.WriteLine(article.Date.ToString("yyyy/MM/dd HH:mm:ss ") + article.Title + " (" + article.Blog.Title + ")");
+                    }
+                    else
+                    {
+                        foreach (var article in bundle.Articles)
+                        {
+                            writer.WriteLine("● " + article.Date.ToString("yyyy/MM/dd HH:mm:ss ") + article.Title + " (" + article.Blog.Title + ")");
+                        }
+                    }
+                    writer.WriteLine();
+                }
+            }
+        }
+
+        public string ID
+        {
+            get
+            {
+                return id;
+            }
+        }
+
+        public IReadOnlyList<RssInfo> RssInfoList
+        {
+            get
+            {
+                return rssInfoList;
+            }
         }
     }
 }
