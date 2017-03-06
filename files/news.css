@@ -92,6 +92,13 @@ a:hover
 	background-color: #BBDEFB;
 }
 
+.blogtitle a
+{
+	padding: 0px;
+	display: block;
+	width: 100%;
+}
+
 .menu_general
 {
 	font-weight: bold;
@@ -130,24 +137,28 @@ a:hover
 
 .menu_general a
 {
+	padding: 0px;
 	display: block;
 	width: 100%;
 }
 
 .menu_news a
 {
+	padding: 0px;
 	display: block;
 	width: 100%;
 }
 
 .menu_anime a
 {
+	padding: 0px;
 	display: block;
 	width: 100%;
 }
 
 .menu_other a
 {
+	padding: 0px;
 	display: block;
 	width: 100%;
 }
