@@ -8,30 +8,34 @@ namespace OitAntennaKai
     internal class Category
     {
         private string id;
+        private bool enableBundle;
         private List<RssInfo> rssInfoList;
         private string outputFilePath;
 
-        public Category(string id)
+        public Category(string id, bool enableBundle)
         {
             this.id = id;
+            this.enableBundle = enableBundle;
             var rssListPath = Path.Combine(Setting.RssListDirectory, id + ".txt");
             rssInfoList = new List<RssInfo>();
+            Console.WriteLine("カテゴリ '" + id + "' を初期化します。");
             foreach (var line in File.ReadLines(rssListPath))
             {
-                var rssInfo = new RssInfo(line);
+                var rssInfo = new RssInfo(this, line);
                 Console.WriteLine(line + " -> " + rssInfo.Message);
                 rssInfoList.Add(rssInfo);
             }
             outputFilePath = Path.Combine(Setting.OutputDirectory, id + ".html");
         }
 
-        public void CreateHtmlFile(bool enableBundle)
+        public void CreateHtmlFile()
         {
             var book = new Book(rssInfoList.Where(rss => rss.Blog != null).Select(rss => rss.Blog), enableBundle);
             HtmlMainPage.CreateMainPage(outputFilePath, book);
+            //Console.WriteLine("HTMLが更新されたぜ (" + outputFilePath + ")");
         }
 
-        internal void DumpArticles(bool enableBundle)
+        internal void DumpArticles()
         {
             var book = new Book(rssInfoList.Where(rss => rss.Blog != null).Select(rss => rss.Blog), enableBundle);
             var path = Path.Combine(Setting.OutputDirectory, id + ".txt");

@@ -1,7 +1,8 @@
-﻿http://feedblog.ameba.jp/rss/ameblo/datoushinzoabe/rss20.xml
+http://blog.livedoor.jp/geek/index.rdf
+http://feedblog.ameba.jp/rss/ameblo/datoushinzoabe/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/minusa-yorikazu/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/shingekinosyomin/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/yangh-wenly/rss20.xml
 http://postd.cc/feed/
 http://rssblog.ameba.jp/takaakimitsuhashi/rss20.xml
-http://unkoasdf.com/index.rdf
+https://cpplover.blogspot.jp/rss.xml

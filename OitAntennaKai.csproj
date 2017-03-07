@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OitAntennaKai</RootNamespace>
-    <AssemblyName>OitAntennaKai</AssemblyName>
+    <AssemblyName>oitantenna</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -73,7 +73,7 @@
     <Content Include="files\news.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="files\other.css">
+    <Content Include="files\others.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="HtmlLogPage.cs" />
@@ -89,7 +89,7 @@
     <Content Include="rsslist\news.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="rsslist\other.txt">
+    <Content Include="rsslist\others.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

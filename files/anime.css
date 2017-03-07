@@ -126,7 +126,7 @@ a:hover
 	background: #FFECB3;
 }
 
-.menu_other
+.menu_others
 {
 	font-weight: bold;
 	text-align: center;
@@ -156,7 +156,7 @@ a:hover
 	width: 100%;
 }
 
-.menu_other a
+.menu_others a
 {
 	padding: 0px;
 	display: block;

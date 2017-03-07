@@ -19,7 +19,7 @@ http://burusoku-vip.com/index.rdf
 http://chaos2ch.com/index.rdf
 http://cherio199.blog120.fc2.com/?xml
 http://exawarosu.net/index.rdf
-http://feeds.gurum.biz/gurum/rss
+http://feeds.gurum.biz/gurum/rss/
 http://fesoku.net/index.rdf
 http://hamusoku.com/index.rdf
 http://hijikisokuhou.doorblog.jp/index.rdf
@@ -40,7 +40,7 @@ http://morinogorira.seesaa.net/index.rdf
 http://netaatoz.jp/index.rdf
 http://news4vip.livedoor.biz/index.rdf
 http://news4wide.livedoor.biz/index.rdf
-http://nyaasokuvip.net/feed
+http://nyaasokuvip.net/feed/
 http://rabitsokuhou.2chblog.jp/index.rdf
 http://rajic.ldblog.jp/index.rdf
 http://ryusoku.com/index.rdf

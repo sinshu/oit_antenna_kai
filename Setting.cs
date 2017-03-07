@@ -17,6 +17,8 @@ namespace OitAntennaKai
         public static readonly string BlogCacheDirectory;
         public static readonly string OutputDirectory;
 
+        public static readonly TimeSpan AccessInterval = TimeSpan.FromMinutes(15);
+
         static Setting()
         {
             var exePath = Assembly.GetEntryAssembly().Location;

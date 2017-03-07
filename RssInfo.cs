@@ -6,12 +6,14 @@ namespace OitAntennaKai
 {
     internal class RssInfo
     {
+        private Category category;
         private string uri;
         private Blog blog;
         private string message;
 
-        public RssInfo(string uri)
+        public RssInfo(Category category, string uri)
         {
+            this.category = category;
             this.uri = uri;
             Update();
         }
@@ -69,6 +71,14 @@ namespace OitAntennaKai
                 {
                     yield break;
                 }
+            }
+        }
+
+        public Category Category
+        {
+            get
+            {
+                return category;
             }
         }
 

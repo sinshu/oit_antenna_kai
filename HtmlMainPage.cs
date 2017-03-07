@@ -99,7 +99,7 @@ namespace OitAntennaKai
             writer.WriteLine("<div class=\"menu_general\">" + CreateLink_DoNotOpenNewWindow("一般", "general.html") + "</div>");
             writer.WriteLine("<div class=\"menu_news\">" + CreateLink_DoNotOpenNewWindow("ニュース", "news.html") + "</div>");
             writer.WriteLine("<div class=\"menu_anime\">" + CreateLink_DoNotOpenNewWindow("サブカル", "anime.html") + "</div>");
-            writer.WriteLine("<div class=\"menu_other\">" + CreateLink_DoNotOpenNewWindow("その他", "other.html") + "</div>");
+            writer.WriteLine("<div class=\"menu_others\">" + CreateLink_DoNotOpenNewWindow("その他", "others.html") + "</div>");
             writer.WriteLine("</div>");
         }
 

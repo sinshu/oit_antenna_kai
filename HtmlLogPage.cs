@@ -8,9 +8,13 @@ namespace OitAntennaKai
 {
     internal static class HtmlLogPage
     {
-        public static void CreateLogPage(string path, IEnumerable<Category> categories)
+        private static readonly string daysOfWeek = "日月火水木金土";
+
+        private static readonly string outputPath = Path.Combine(Setting.OutputDirectory, "stats.html");
+
+        public static void CreateLogPage(IEnumerable<Category> categories)
         {
-            using (var writer = new StreamWriter(path, false, Encoding.UTF8))
+            using (var writer = new StreamWriter(outputPath, false, Encoding.UTF8))
             {
                 BeginHtml(writer);
                 WriteHeader(writer, "RSS取得状況");
@@ -19,6 +23,7 @@ namespace OitAntennaKai
                 EndBody(writer);
                 EndHtml(writer);
             }
+            //Console.WriteLine("ログが更新されたぜ (" + outputPath + ")");
         }
 
         private static void BeginHtml(StreamWriter writer)
@@ -45,6 +50,8 @@ namespace OitAntennaKai
         {
             writer.WriteLine("<body>");
             writer.WriteLine("<h1>RSS取得状況</h1>");
+            var now = DateTime.Now;
+            writer.WriteLine("<div>最終更新日：" + now.Year + "年" + now.Month + "月" + now.Day + "日(" + daysOfWeek[(int)now.DayOfWeek] + ") " + now.ToString("HH:mm") + "</div>");
         }
 
         private static void EndBody(StreamWriter writer)
