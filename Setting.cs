@@ -8,7 +8,7 @@ namespace OitAntennaKai
 {
     public static class Setting
     {
-        public static readonly bool UseBlogCache = true;
+        public static readonly bool UseBlogCache = false;
 
         public static readonly string PageTitle = "OITあんてな(改)";
 
