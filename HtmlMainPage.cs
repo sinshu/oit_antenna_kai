@@ -183,13 +183,13 @@ namespace OitAntennaKai
         {
             var sb = new StringBuilder();
             sb.Append("記事数: ");
-            sb.Append(blog.Stats.ArticlesPerDay.ToString("0.0"));
+            sb.Append(blog.RssInfo.Stats.ArticlesPerDay.ToString("0.0"));
             sb.Append(" (件/日)&#13;&#10;");
             sb.Append("重複率: ");
-            sb.Append((100 * blog.Stats.BundleRatio).ToString("0.0"));
+            sb.Append((100 * blog.RssInfo.Stats.BundleRatio).ToString("0.0"));
             sb.Append(" (%)&#13;&#10;");
             sb.Append("スコア: ");
-            sb.Append((100 * blog.Stats.Score).ToString("0.00"));
+            sb.Append((100 * blog.RssInfo.Stats.Score).ToString("0.00"));
             return sb.ToString();
         }
     }

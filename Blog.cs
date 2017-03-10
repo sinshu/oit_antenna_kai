@@ -14,8 +14,6 @@ namespace OitAntennaKai
         private string title;
         private List<Article> articles;
 
-        private Stats stats;
-
         public Blog(Stream stream)
         {
             var document = new XmlDocument();
@@ -46,7 +44,6 @@ namespace OitAntennaKai
             {
                 throw new Exception("記事の取得に失敗しました。");
             }
-            stats = new Stats(this);
         }
 
         private static string GetUri(XmlDocument document)
@@ -108,12 +105,11 @@ namespace OitAntennaKai
             }
         }
 
-        internal Stats Stats
+        // キモいが許せ…
+        internal RssInfo RssInfo
         {
-            get
-            {
-                return stats;
-            }
+            get;
+            set;
         }
     }
 }

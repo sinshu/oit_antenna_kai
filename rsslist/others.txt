@@ -1,4 +1,5 @@
 http://blog.livedoor.jp/geek/index.rdf
+http://datsuaikokukarutonosusume.blog.jp/index.rdf
 http://feedblog.ameba.jp/rss/ameblo/datoushinzoabe/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/minusa-yorikazu/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/shingekinosyomin/rss20.xml

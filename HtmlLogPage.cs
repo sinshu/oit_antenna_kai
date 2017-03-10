@@ -83,10 +83,10 @@ namespace OitAntennaKai
             {
                 writer.Write("<td>" + rss.Blog.Title + "</td>");
                 writer.Write("<td>" + GetDayText(rss.Blog.Articles[0].Date) + "</td>");
-                writer.Write("<td class=\"number\">" + rss.Blog.Stats.AccessFailureCount + "</td>");
-                writer.Write("<td class=\"number\">" + rss.Blog.Stats.ArticlesPerDay.ToString("0.0") + "</td>");
-                writer.Write("<td class=\"number\">" + (100 * rss.Blog.Stats.BundleRatio).ToString("0.0") + "</td>");
-                writer.Write("<td class=\"number\">" + (100 * rss.Blog.Stats.Score).ToString("0.00") + "</td>");
+                writer.Write("<td class=\"number\">" + rss.Stats.AccessFailureCount + "</td>");
+                writer.Write("<td class=\"number\">" + rss.Stats.ArticlesPerDay.ToString("0.0") + "</td>");
+                writer.Write("<td class=\"number\">" + (100 * rss.Stats.BundleRatio).ToString("0.0") + "</td>");
+                writer.Write("<td class=\"number\">" + (100 * rss.Stats.Score).ToString("0.00") + "</td>");
             }
             else
             {

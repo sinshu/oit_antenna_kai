@@ -29,7 +29,7 @@ namespace OitAntennaKai
 
         public IEnumerable<Blog> OrderByScore()
         {
-            return blogs.OrderByDescending(blog => blog.Stats.Score);
+            return blogs.OrderByDescending(blog => blog.RssInfo.Stats.Score);
         }
 
         private static IEnumerable<Article> OrderByDate(IEnumerable<Blog> blogs)
@@ -91,7 +91,7 @@ namespace OitAntennaKai
         {
             foreach (var blog in blogs)
             {
-                blog.Stats.Reset();
+                blog.RssInfo.Stats.ResetScore();
             }
             foreach (var bundle in bundles)
             {
@@ -99,13 +99,13 @@ namespace OitAntennaKai
                 {
                     foreach (var article in bundle.Articles)
                     {
-                        article.Blog.Stats.IncreaseArticleCount();
-                        article.Blog.Stats.IncreaseBundleCount();
+                        article.Blog.RssInfo.Stats.IncreaseArticleCount();
+                        article.Blog.RssInfo.Stats.IncreaseBundleCount();
                     }
                 }
                 else
                 {
-                    bundle.Articles[0].Blog.Stats.IncreaseArticleCount();
+                    bundle.Articles[0].Blog.RssInfo.Stats.IncreaseArticleCount();
                 }
             }
         }

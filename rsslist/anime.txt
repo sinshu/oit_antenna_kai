@@ -1,4 +1,5 @@
 http://2gigenchan.blog.fc2.com/?xml
+http://aaieba.livedoor.biz/index.rdf
 http://animemories.net/feed/
 http://blog.livedoor.jp/nizigami/index.rdf
 http://blog.livedoor.jp/seiyufan/index.rdf
@@ -6,11 +7,11 @@ http://grasoku.com/index.rdf
 http://magsoku.blomaga.jp/index.rdf
 http://nyankobiyori.com/index.rdf
 http://onecall2ch.com/index.rdf
-http://otakulifehack.com/index.rdf
 http://otasoku.livedoor.biz/index.rdf
 http://subcultusin.net/index.rdf
 http://suresuta.jp/feed/
 http://www.anige-sokuhouvip.com/?xml
 http://www.dqm-2.com/index.rdf
+http://www.matolabel.net/index.rdf
 http://yaraon-blog.com/feed/
 http://zakuzaku911.com/index.rdf

@@ -6,24 +6,36 @@ namespace OitAntennaKai
 {
     internal class Stats
     {
-        private Blog blog;
+        private RssInfo rssInfo;
         private int accessFailureCount;
         private double articlesPerDay;
         private int articleCount;
         private int bundleCount;
 
-        internal Stats(Blog blog)
+        internal Stats(RssInfo rssInfo)
         {
-            this.blog = blog;
-            accessFailureCount = 0;
-            Reset();
+            this.rssInfo = rssInfo;
+            ResetAccessFailureCount();
+            ResetScore();
         }
 
-        public void Reset()
+        public void ResetAccessFailureCount()
         {
-            var count = Math.Min(10, blog.Articles.Count);
-            var index = count - 1;
-            articlesPerDay = count / (DateTime.Now - blog.Articles[index].Date).TotalDays;
+            accessFailureCount = 0;
+        }
+
+        public void ResetScore()
+        {
+            if (rssInfo.Blog != null)
+            {
+                var count = Math.Min(10, rssInfo.Blog.Articles.Count);
+                var index = count - 1;
+                articlesPerDay = count / (DateTime.Now - rssInfo.Blog.Articles[index].Date).TotalDays;
+            }
+            else
+            {
+                articlesPerDay = 0;
+            }
             articleCount = 0;
             bundleCount = 0;
         }

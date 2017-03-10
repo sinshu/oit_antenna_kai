@@ -32,5 +32,6 @@ http://shikaku2ch.doorblog.jp/index.rdf
 http://sierblog.com/index.rdf
 http://workingnews.blog117.fc2.com/?xml
 http://www.gadget2ch.com/index.rdf
+http://www.newsch.info/index.rdf
 http://www.scienceplus2ch.com/index.rdf
 http://www.watch2chan.com/index.rdf

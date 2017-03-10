@@ -8,6 +8,7 @@ namespace OitAntennaKai
     {
         private Category category;
         private string uri;
+        private Stats stats;
         private Blog blog;
         private string message;
 
@@ -15,6 +16,7 @@ namespace OitAntennaKai
         {
             this.category = category;
             this.uri = uri;
+            stats = new Stats(this);
             Update();
         }
 
@@ -40,7 +42,7 @@ namespace OitAntennaKai
             {
                 if (blog != null)
                 {
-                    blog.Stats.IncreaseAccessFailureCount();
+                    stats.IncreaseAccessFailureCount();
                 }
                 message = e.Message;
                 return new List<Article>();
@@ -49,14 +51,17 @@ namespace OitAntennaKai
 
         private Blog CreateBlog(string uri)
         {
+            Blog blog;
             if (Setting.UseBlogCache)
             {
-                return BlogCache.GetBlogFromRssUri(uri);
+                blog = BlogCache.GetBlogFromRssUri(uri);
             }
             else
             {
-                return new Blog(uri);
+                blog = new Blog(uri);
             }
+            blog.RssInfo = this;
+            return blog;
         }
 
         private static IEnumerable<Article> EnumerateNewArticles(Blog oldBlog, Blog newBlog)
@@ -87,6 +92,14 @@ namespace OitAntennaKai
             get
             {
                 return uri;
+            }
+        }
+
+        public Stats Stats
+        {
+            get
+            {
+                return stats;
             }
         }
 
