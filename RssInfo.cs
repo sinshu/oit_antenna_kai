@@ -40,10 +40,7 @@ namespace OitAntennaKai
             }
             catch (Exception e)
             {
-                if (blog != null)
-                {
-                    stats.IncreaseAccessFailureCount();
-                }
+                stats.IncreaseAccessFailureCount();
                 message = e.Message;
                 return new List<Article>();
             }

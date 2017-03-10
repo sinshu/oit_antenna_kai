@@ -49,6 +49,7 @@ namespace OitAntennaKai
 
         private static IEnumerable<RssInfo> GetAllRssInfo(IEnumerable<Category> categories)
         {
+            // このランダムソート、問題ないん？
             return categories.SelectMany(category => category.RssInfoList).OrderBy(rss => random.NextDouble());
         }
     }
