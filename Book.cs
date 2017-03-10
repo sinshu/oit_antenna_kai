@@ -21,8 +21,7 @@ namespace OitAntennaKai
             }
             else
             {
-                bundles = blogs.SelectMany(blog => blog.Articles.Select(article => new Bundle(article))).Take(maxBundleCount).ToList();
-                bundles.Sort((x, y) => DateTime.Compare(y.Articles[0].Date, x.Articles[0].Date));
+                bundles = OrderByDate(blogs).Select(article => new Bundle(article)).Take(maxBundleCount).ToList();
             }
             UpdateStats(this.blogs, bundles);
         }
@@ -34,7 +33,10 @@ namespace OitAntennaKai
 
         private static IEnumerable<Article> OrderByDate(IEnumerable<Blog> blogs)
         {
-            var articles = blogs.SelectMany(blog => blog.Articles);
+            // 遠い未来の時刻を設定した記事を作って、その記事をサイトのトップに表示し続けるという手法がある。
+            // そのような記事を時系列に表示する意味はないので、明日よりも未来の時刻を設定された記事は無視する。
+            var tomorrow = DateTime.Now + TimeSpan.FromDays(1);
+            var articles = blogs.SelectMany(blog => blog.Articles.Where(article => article.Date < tomorrow));
             return articles.OrderByDescending(article => article.Date);
         }
 
@@ -83,7 +85,6 @@ namespace OitAntennaKai
                     break;
                 }
             }
-            bundles.Sort((x, y) => DateTime.Compare(y.Articles[0].Date, x.Articles[0].Date));
             return bundles;
         }
 

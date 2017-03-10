@@ -15,6 +15,7 @@ namespace OitAntennaKai
         {
             var categories = CreateCategories().ToArray();
             categories.ForEach(category => category.CreateHtmlFile());
+            //categories.ForEach(category => category.DumpArticles());
             HtmlLogPage.CreateLogPage(categories);
             while (true)
             {
