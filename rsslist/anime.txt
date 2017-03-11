@@ -1,6 +1,7 @@
 http://2gigenchan.blog.fc2.com/?xml
 http://aaieba.livedoor.biz/index.rdf
 http://animemories.net/feed/
+http://blog.livedoor.jp/geek/index.rdf
 http://blog.livedoor.jp/nizigami/index.rdf
 http://blog.livedoor.jp/seiyufan/index.rdf
 http://grasoku.com/index.rdf
