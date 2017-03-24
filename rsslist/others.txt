@@ -1,8 +1,11 @@
 http://datsuaikokukarutonosusume.blog.jp/index.rdf
 http://feedblog.ameba.jp/rss/ameblo/datoushinzoabe/rss20.xml
+http://feedblog.ameba.jp/rss/ameblo/evening--primrose/rss20.xml
+http://feedblog.ameba.jp/rss/ameblo/kobuta1205/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/minusa-yorikazu/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/shingekinosyomin/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/yangh-wenly/rss20.xml
+http://feedblog.ameba.jp/rss/ameblo/zuruzuru4/rss20.xml
 http://postd.cc/feed/
 http://rssblog.ameba.jp/takaakimitsuhashi/rss20.xml
 http://saigaijyouhou.com/?xml
