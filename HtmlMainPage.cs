@@ -72,11 +72,6 @@ namespace OitAntennaKai
             return "<a class=\"" + cssClass + "\" title=\"" + Escape(title) + "\"  href=\"" + Escape(href) + "\" target=\"_blank\">" + Escape(text) + "</a>";
         }
 
-        private static string CreateLink_DoNotOpenNewWindow(string text, string href)
-        {
-            return "<a href=\"" + Escape(href) + "\">" + Escape(text) + "</a>";
-        }
-
         private static string CreateLink_NoEscapeForTitle(string text, string title, string href, string cssClass)
         {
             return "<a class=\"" + cssClass + "\" title=\"" + title + "\"  href=\"" + Escape(href) + "\" target=\"_blank\">" + Escape(text) + "</a>";
@@ -96,10 +91,10 @@ namespace OitAntennaKai
         private static void WriteMenu(StreamWriter writer)
         {
             writer.WriteLine("<div class=\"rack\">");
-            writer.WriteLine("<div class=\"menu_general\">" + CreateLink_DoNotOpenNewWindow("一般", "general.html") + "</div>");
-            writer.WriteLine("<div class=\"menu_news\">" + CreateLink_DoNotOpenNewWindow("ニュース", "news.html") + "</div>");
-            writer.WriteLine("<div class=\"menu_anime\">" + CreateLink_DoNotOpenNewWindow("サブカル", "anime.html") + "</div>");
-            writer.WriteLine("<div class=\"menu_others\">" + CreateLink_DoNotOpenNewWindow("その他", "others.html") + "</div>");
+            writer.WriteLine("<a href=\"general.html\"><div class=\"menu_general\">一般</div></a>");
+            writer.WriteLine("<a href=\"news.html\"><div class=\"menu_news\">ニュース</div></a>");
+            writer.WriteLine("<a href=\"anime.html\"><div class=\"menu_anime\">サブカル</div></a>");
+            writer.WriteLine("<a href=\"others.html\"><div class=\"menu_others\">その他</div></a>");
             writer.WriteLine("</div>");
         }
 
@@ -152,7 +147,7 @@ namespace OitAntennaKai
                 foreach (var blog in pair)
                 {
                     writer.WriteLine("<div class=\"subwindow\">");
-                    writer.WriteLine("<div class=\"blogtitle\">" + CreateLink_NoEscapeForTitle(blog.Title, GetBlogStatsText(blog), blog.Uri, "blogtitle") + "</div>");
+                    writer.WriteLine("<a title=\"" + GetBlogStatsText(blog) + "\" href=\"" + blog.Uri + "\"><div class=\"blogtitle\">" + blog.Title + "</div></a>");
                     writer.WriteLine("<table>");
                     var lastDay = 0;
                     foreach (var article in blog.Articles.Take(10))
