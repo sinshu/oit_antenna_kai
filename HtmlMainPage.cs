@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace OitAntennaKai
 {
@@ -126,7 +127,7 @@ namespace OitAntennaKai
         private static void WriteMainWindowRow(StreamWriter writer, Bundle bundle)
         {
             var sb = new StringBuilder();
-            sb.Append(CreateLink(bundle.Articles[0].Title, bundle.Articles[0].Blog.Title, bundle.Articles[0].Uri, "normallink"));
+            sb.Append(CreateLink(ShortenTooLongWww(bundle.Articles[0].Title), bundle.Articles[0].Blog.Title, bundle.Articles[0].Uri, "normallink"));
             foreach (var article in bundle.Articles.Skip(1))
             {
                 sb.Append(" ");
@@ -170,7 +171,7 @@ namespace OitAntennaKai
         {
             writer.Write("<tr>");
             writer.Write("<td>" + article.Date.ToString("HH:mm") + "</td>");
-            writer.Write("<td>" + CreateLink(article.Title, article.Blog.Title, article.Uri, "normallink") + "</td>");
+            writer.Write("<td>" + CreateLink(ShortenTooLongWww(article.Title), article.Blog.Title, article.Uri, "normallink") + "</td>");
             writer.WriteLine("</tr>");
         }
 
@@ -186,6 +187,13 @@ namespace OitAntennaKai
             sb.Append("スコア: ");
             sb.Append((100 * blog.RssInfo.Stats.Score).ToString("0.00"));
             return sb.ToString();
+        }
+
+        // 草を生やしまくってる記事タイトルがあるとレイアウトが崩れる。
+        // これを回避するために長すぎる草を短くする。
+        private static string ShortenTooLongWww(string value)
+        {
+            return Regex.Replace(value, "[wWｗＷ]{6,}", match => match.Value.Substring(0, 5));
         }
     }
 }
