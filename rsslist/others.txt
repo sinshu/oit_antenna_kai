@@ -1,3 +1,4 @@
+http://blog.midnightseminar.net/rss
 http://datsuaikokukarutonosusume.blog.jp/index.rdf
 http://feedblog.ameba.jp/rss/ameblo/datoushinzoabe/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/evening--primrose/rss20.xml
@@ -7,7 +8,5 @@ http://feedblog.ameba.jp/rss/ameblo/shingekinosyomin/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/yangh-wenly/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/zuruzuru4/rss20.xml
 http://postd.cc/feed/
-http://rssblog.ameba.jp/takaakimitsuhashi/rss20.xml
-http://saigaijyouhou.com/?xml
-https://38news.jp/feed/
+http://www.statsbeginner.net/rss
 https://cpplover.blogspot.jp/rss.xml
