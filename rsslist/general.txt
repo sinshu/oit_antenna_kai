@@ -2,7 +2,6 @@ http://alfalfalfa.com/index.rdf
 http://animalch.net/index.rdf
 http://baiku-sokuho.info/index.rdf
 http://bipblog.com/index.rdf
-http://blog.livedoor.jp/chihhylove/index.rdf
 http://blog.livedoor.jp/diet2channel/index.rdf
 http://blog.livedoor.jp/goldennews/index.rdf
 http://blog.livedoor.jp/hisabisaniwarota/index.rdf
@@ -21,7 +20,6 @@ http://exawarosu.net/index.rdf
 http://feeds.gurum.biz/gurum/rss/
 http://fesoku.net/index.rdf
 http://hamusoku.com/index.rdf
-http://hijikisokuhou.doorblog.jp/index.rdf
 http://himasoku.com/index.rdf
 http://ikeike2ch.jp/index.rdf
 http://inazumanews2.com/index.rdf
