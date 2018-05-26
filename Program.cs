@@ -13,6 +13,14 @@ namespace OitAntennaKai
 
         private static void Main(string[] args)
         {
+            while (true)
+            {
+                Run();
+            }
+        }
+
+        private static void Run()
+        {
             var categories = CreateCategories().ToArray();
             categories.ForEach(category => category.CreateHtmlFile());
             HtmlLogPage.CreateLogPage(categories);
@@ -22,6 +30,7 @@ namespace OitAntennaKai
                 var interval = TimeSpan.FromSeconds(Setting.AccessInterval.TotalSeconds / rssList.Count);
                 Console.WriteLine("ブログ数: " + rssList.Count);
                 Console.WriteLine("更新間隔: " + interval.TotalSeconds.ToString("0.0") + "秒");
+
                 var lastUpdateTime = DateTime.Now;
                 foreach (var rss in rssList)
                 {
@@ -31,7 +40,7 @@ namespace OitAntennaKai
                     if ((now - lastUpdateTime).TotalHours >= 1)
                     {
                         Console.WriteLine("寝てたっぽい...");
-                        break;
+                        return;
                     }
                     lastUpdateTime = now;
 

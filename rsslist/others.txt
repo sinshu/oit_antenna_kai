@@ -10,4 +10,6 @@ http://feedblog.ameba.jp/rss/ameblo/yangh-wenly/rss20.xml
 http://feedblog.ameba.jp/rss/ameblo/zuruzuru4/rss20.xml
 http://postd.cc/feed/
 http://www.statsbeginner.net/rss
+https://38news.jp/feed/
 https://cpplover.blogspot.jp/rss.xml
+https://the-criterion.jp/feed/
