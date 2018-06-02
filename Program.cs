@@ -40,6 +40,7 @@ namespace OitAntennaKai
                     if ((now - lastUpdateTime).TotalHours >= 1)
                     {
                         Console.WriteLine("寝てたっぽい...");
+                        Thread.Sleep(TimeSpan.FromSeconds(10));
                         return;
                     }
                     lastUpdateTime = now;
