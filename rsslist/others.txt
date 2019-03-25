@@ -9,6 +9,6 @@ http://rssblog.ameba.jp/spiritualist-heart/rss20.xml
 https://38news.jp/feed/
 https://cpplover.blogspot.jp/rss.xml
 https://johosokuhou.com/feed/
-https://rondan.net/feed
+https://rondan.net/feed/
 https://so-t.biz/feed/
 https://the-criterion.jp/feed/
