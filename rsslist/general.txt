@@ -5,11 +5,9 @@ http://bipblog.com/index.rdf
 http://blog.livedoor.jp/diet2channel/index.rdf
 http://blog.livedoor.jp/goldennews/index.rdf
 http://blog.livedoor.jp/hisabisaniwarota/index.rdf
-http://blog.livedoor.jp/hukidamari_2ch/index.rdf
 http://blog.livedoor.jp/kinisoku/index.rdf
 http://blog.livedoor.jp/love120331/index.rdf
 http://blog.livedoor.jp/news23vip/index.rdf
-http://blog.livedoor.jp/nonvip/index.rdf
 http://blog.livedoor.jp/schoolunderground/index.rdf
 http://blog.livedoor.jp/zetusoku/index.rdf
 http://brow2ing.doorblog.jp/index.rdf
@@ -23,7 +21,6 @@ http://hamusoku.com/index.rdf
 http://himasoku.com/index.rdf
 http://ikeike2ch.jp/index.rdf
 http://inazumanews2.com/index.rdf
-http://insyoku.livedoor.biz/index.rdf
 http://kanasoku.info/index.rdf
 http://katuru2ch.blog12.fc2.com/?xml
 http://kiru2ch.com/index.rdf
@@ -32,7 +29,6 @@ http://kyousoku.net/index.rdf
 http://majikichi.com/index.rdf
 http://michaelsan.livedoor.biz/index.rdf
 http://mindhack2ch.com/index.rdf
-http://momosoku.doorblog.jp/index.rdf
 http://netaatoz.jp/index.rdf
 http://news4vip.livedoor.biz/index.rdf
 http://news4wide.livedoor.biz/index.rdf
@@ -42,7 +38,6 @@ http://rajic.ldblog.jp/index.rdf
 http://ryusoku.com/index.rdf
 http://sonicch.com/index.rdf
 http://squallchannel.com/index.rdf
-http://sugoiyasokuhou.doorblog.jp/index.rdf
 http://tenkomo.com/?xml
 http://totalmatomedia.blog.fc2.com/?xml
 http://underworld2ch.blog29.fc2.com/?xml

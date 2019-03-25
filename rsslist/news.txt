@@ -8,13 +8,9 @@ http://blog.livedoor.jp/jyoushiki43/index.rdf
 http://blog.livedoor.jp/nwknews/index.rdf
 http://blog.livedoor.jp/rbkyn844/index.rdf
 http://blog.livedoor.jp/yu_ps13/index.rdf
-http://fullbokko.2chblog.jp/index.rdf
 http://fxya.blog129.fc2.com/?xml
 http://gadgetlife2ch.blomaga.jp/index.rdf
 http://gahalog.2chblog.jp/index.rdf
-http://inakanews.doorblog.jp/index.rdf
-http://ishikisoku.com/feed/
-http://kanesoku.com/index.rdf
 http://kuromacyo.livedoor.biz/index.rdf
 http://lifehack2ch.livedoor.biz/index.rdf
 http://matometanews.com/index.rdf
@@ -30,6 +26,5 @@ http://shikaku2ch.doorblog.jp/index.rdf
 http://sierblog.com/index.rdf
 http://workingnews.blog117.fc2.com/?xml
 http://www.gadget2ch.com/index.rdf
-http://www.newsch.info/index.rdf
 http://www.scienceplus2ch.com/index.rdf
 http://www.watch2chan.com/index.rdf
