@@ -1,10 +1,12 @@
 http://aaieba.livedoor.biz/index.rdf
+http://anicobin.ldblog.jp/index.rdf
 http://blog.livedoor.jp/geek/index.rdf
 http://blog.livedoor.jp/nizigami/index.rdf
 http://blog.livedoor.jp/qmanews/index.rdf
 http://blog.livedoor.jp/seiyufan/index.rdf
 http://blog.livedoor.jp/yuriton-garuon/index.rdf
 http://grasoku.com/index.rdf
+http://iroirosokuhou.com/index.rdf
 http://magsoku.blomaga.jp/index.rdf
 http://nyankobiyori.com/index.rdf
 http://onecall2ch.com/index.rdf
