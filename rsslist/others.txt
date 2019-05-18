@@ -10,11 +10,11 @@ http://rssblog.ameba.jp/nakedcds/rss20.xml
 http://rssblog.ameba.jp/nyako-0924/rss20.xml
 http://rssblog.ameba.jp/p-manjiro/rss20.xml
 http://rssblog.ameba.jp/reisaiouen/rss20.xml
-http://rssblog.ameba.jp/shingekinosyomin/rss20.xml
 http://rssblog.ameba.jp/sorata31/rss20.xml
 http://rssblog.ameba.jp/spiritualist-heart/rss20.xml
 http://rssblog.ameba.jp/tasan-ame/rss20.xml
 http://rssblog.ameba.jp/zuruzuru4/rss20.xml
+http://shin-geki.com/feed/
 http://www.sakuranokai.org/index.rdf
 https://38news.jp/feed/
 https://cpplover.blogspot.jp/rss.xml
