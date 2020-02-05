@@ -127,7 +127,7 @@ namespace OitAntennaKai
         private static void WriteMainWindowRow(StreamWriter writer, Bundle bundle)
         {
             var sb = new StringBuilder();
-            sb.Append(CreateLink(ShortenTooLongWww(bundle.Articles[0].Title), bundle.Articles[0].Blog.Title, bundle.Articles[0].Uri, "normallink"));
+            sb.Append(CreateLink(TrimKusa(bundle.Articles[0].Title), bundle.Articles[0].Blog.Title, bundle.Articles[0].Uri, "normallink"));
             foreach (var article in bundle.Articles.Skip(1))
             {
                 sb.Append(" ");
@@ -171,7 +171,7 @@ namespace OitAntennaKai
         {
             writer.Write("<tr>");
             writer.Write("<td>" + article.Date.ToString("HH:mm") + "</td>");
-            writer.Write("<td>" + CreateLink(ShortenTooLongWww(article.Title), article.Blog.Title, article.Uri, "normallink") + "</td>");
+            writer.Write("<td>" + CreateLink(TrimKusa(article.Title), article.Blog.Title, article.Uri, "normallink") + "</td>");
             writer.WriteLine("</tr>");
         }
 
@@ -191,9 +191,47 @@ namespace OitAntennaKai
 
         // 草を生やしまくってる記事タイトルがあるとレイアウトが崩れる。
         // これを回避するために長すぎる草を短くする。
-        private static string ShortenTooLongWww(string value)
+        private static string TrimKusa(string value)
         {
-            return Regex.Replace(value, "[wWｗＷ]{6,}", match => match.Value.Substring(0, 5));
+            var count = new Dictionary<char, int>();
+            foreach (var ch in value)
+            {
+                if (count.ContainsKey(ch))
+                {
+                    count[ch]++;
+                }
+                else
+                {
+                    count.Add(ch, 1);
+                }
+            }
+
+            var sb = new StringBuilder();
+            var buffer = new List<char>();
+            foreach (var ch in value)
+            {
+                if (count[ch] <= 3)
+                {
+                    if (buffer.Count > 0)
+                    {
+                        sb.Append(buffer.ToArray());
+                        buffer.Clear();
+                    }
+                    sb.Append(ch);
+                }
+                else
+                {
+                    if (buffer.Count < 5)
+                    {
+                        buffer.Add(ch);
+                    }
+                }
+            }
+            if (buffer.Count > 0)
+            {
+                sb.Append(buffer.ToArray());
+            }
+            return sb.ToString();
         }
     }
 }

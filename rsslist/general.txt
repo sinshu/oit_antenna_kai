@@ -40,7 +40,6 @@ http://sonicch.com/index.rdf
 http://squallchannel.com/index.rdf
 http://tenkomo.com/?xml
 http://totalmatomedia.blog.fc2.com/?xml
-http://underworld2ch.blog29.fc2.com/?xml
 http://usi32.com/index.rdf
 http://vippers.jp/index.rdf
 http://vipsister23.com/index.rdf

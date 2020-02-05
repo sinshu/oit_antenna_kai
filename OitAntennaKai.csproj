@@ -58,6 +58,7 @@
     <Compile Include="RssInfo.cs" />
     <Compile Include="Setting.cs" />
     <Compile Include="Stats.cs" />
+    <Compile Include="StringEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

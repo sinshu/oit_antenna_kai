@@ -12,9 +12,7 @@ http://nyankobiyori.com/index.rdf
 http://onecall2ch.com/index.rdf
 http://otanew.jp/index.rdf
 http://otasoku.livedoor.biz/index.rdf
-http://subcultusin.net/index.rdf
 http://www.anige-sokuhouvip.com/?xml
-http://www.matolabel.net/index.rdf
 http://yaraon-blog.com/feed/
 http://yurinavi.com/feed/
 http://zakuzaku911.com/index.rdf

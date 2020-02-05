@@ -46,15 +46,47 @@ namespace OitAntennaKai
             return (double)count / Math.Max(length, feature.length);
         }
 
-        private string Normalize(string source)
+        public static string Normalize(string source)
         {
-            var sb = new StringBuilder();
+            source = StringEx.HankakuToZenkaku(source);
+
+            var count = new Dictionary<char, int>();
             foreach (var ch in source)
             {
-                if (ch != 'w' && ch != 'W' && ch != 'ｗ' && ch != 'Ｗ')
+                if (count.ContainsKey(ch))
                 {
+                    count[ch]++;
+                }
+                else
+                {
+                    count.Add(ch, 1);
+                }
+            }
+
+            var sb = new StringBuilder();
+            var buffer = new List<char>();
+            foreach (var ch in source)
+            {
+                if (count[ch] <= 3)
+                {
+                    if (buffer.Count > 0)
+                    {
+                        sb.Append(buffer.ToArray());
+                        buffer.Clear();
+                    }
                     sb.Append(ch);
                 }
+                else
+                {
+                    if (buffer.Count < 5)
+                    {
+                        buffer.Add(ch);
+                    }
+                }
+            }
+            if (buffer.Count > 0)
+            {
+                sb.Append(buffer.ToArray());
             }
             return sb.ToString();
         }
