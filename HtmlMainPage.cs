@@ -127,7 +127,7 @@ namespace OitAntennaKai
         private static void WriteMainWindowRow(StreamWriter writer, Bundle bundle)
         {
             var sb = new StringBuilder();
-            sb.Append(CreateLink(TrimKusa(bundle.Articles[0].Title), bundle.Articles[0].Blog.Title, bundle.Articles[0].Uri, "normallink"));
+            sb.Append(CreateLink(TrimKusa(bundle.Articles[0].Title), bundle.Articles[0].Title, bundle.Articles[0].Uri, "normallink"));
             foreach (var article in bundle.Articles.Skip(1))
             {
                 sb.Append(" ");
@@ -171,7 +171,7 @@ namespace OitAntennaKai
         {
             writer.Write("<tr>");
             writer.Write("<td>" + article.Date.ToString("HH:mm") + "</td>");
-            writer.Write("<td>" + CreateLink(TrimKusa(article.Title), article.Blog.Title, article.Uri, "normallink") + "</td>");
+            writer.Write("<td>" + CreateLink(TrimKusa(article.Title), article.Title, article.Uri, "normallink") + "</td>");
             writer.WriteLine("</tr>");
         }
 
