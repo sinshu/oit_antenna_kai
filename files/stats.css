@@ -5,8 +5,8 @@ body
 	font-family: "ＭＳ Ｐゴシック";
 	font-size: 0.8em;
 	line-height: 1.2em;
-	color: #606060;
-	background-color: #FFFFFF;
+	color: #757575;
+	background-color: #212121;
 }
 
 table
@@ -16,7 +16,7 @@ table
 
 td
 {
-	border: solid 1px #A0A0A0;
+	border: solid 1px #616161;
 	padding: 0.3em;
 }
 
@@ -24,7 +24,8 @@ td
 {
 	font-weight: bold;
 	text-align: center;
-	background-color: #E0E0E0;
+	color: #9E9E9E;
+	background-color: #424242;
 }
 
 .number

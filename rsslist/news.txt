@@ -18,10 +18,8 @@ http://military38.com/index.rdf
 http://mona-news.com/index.rdf
 http://netouyonews.net/index.rdf
 http://news.2chblog.jp/index.rdf
-http://nnt-sokuhou.com/index.rdf
 http://okanehadaiji.com/index.rdf
 http://shikaku2ch.doorblog.jp/index.rdf
-http://sierblog.com/index.rdf
 http://workingnews.blog117.fc2.com/?xml
 http://www.gadget2ch.com/index.rdf
 http://www.scienceplus2ch.com/index.rdf

@@ -1,7 +1,6 @@
 http://rssblog.ameba.jp/minusa-yorikazu/rss20.xml
 http://shin-geki.com/feed/
 https://38news.jp/feed/
-https://cpplover.blogspot.jp/rss.xml
 https://johosokuhou.com/feed/
 https://so-t.biz/feed/
 https://the-criterion.jp/category/mail-magazine/feed/

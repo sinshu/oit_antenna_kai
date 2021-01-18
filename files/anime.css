@@ -5,8 +5,8 @@ body
 	font-family: "ＭＳ Ｐゴシック";
 	font-size: 1.0em;
 	line-height: 1.0em;
-	color: #606060;
-	background-color: #FFFFFF;
+	color: #757575;
+	background-color: #212121;
 }
 
 h1
@@ -23,23 +23,25 @@ a
 a:hover
 {
 	text-decoration: underline;
+	text-decoration-color: #FFFFFF;
 }
 
 .normallink:hover
 {
 	text-decoration: none;
-	background-color: #FFF8E1;
+	color: #FFFFFF;
+	background-color: #FF9800;
 }
 
 .minorlink
 {
-	color: #FFECB3;
+	color: #424242;
 }
 
 .minorlink:hover
 {
 	text-decoration: none;
-	color: #FFC107;
+	color: #FF9800;
 }
 
 .rack
@@ -59,7 +61,7 @@ a:hover
 	height: 36em;
 	border-style: solid;
 	border-width: 0.3em;
-	border-color: #FFECB3;
+	border-color: #FF9800;
 	padding: 0.5em;
 	overflow-y: scroll;
 }
@@ -89,7 +91,8 @@ a:hover
 {
 	font-weight: bold;
 	padding: 0.5em;
-	background-color: #FFECB3;
+	color: #FFF3E0;
+	background-color: #FF9800;
 }
 
 .blogtitle a
@@ -105,7 +108,8 @@ a:hover
 	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #ffcdd2;
+	color: #ffcdd2;
+	background: #f44336;
 }
 
 .menu_news
@@ -114,7 +118,8 @@ a:hover
 	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #BBDEFB;
+	color: #BBDEFB;
+	background: #2196F3;
 }
 
 .menu_anime
@@ -123,7 +128,8 @@ a:hover
 	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #FFECB3;
+	color: #FFF3E0;
+	background: #FF9800;
 }
 
 .menu_others
@@ -132,7 +138,8 @@ a:hover
 	text-align: center;
 	padding: 0.5em;
 	width: 15em;
-	background: #C8E6C9;
+	color: #C8E6C9;
+	background: #4CAF50;
 }
 
 .menu_general a

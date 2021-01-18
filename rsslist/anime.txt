@@ -7,8 +7,6 @@ http://blog.livedoor.jp/seiyufan/index.rdf
 http://blog.livedoor.jp/yuriton-garuon/index.rdf
 http://grasoku.com/index.rdf
 http://iroirosokuhou.com/index.rdf
-http://magsoku.blomaga.jp/index.rdf
-http://nyankobiyori.com/index.rdf
 http://onecall2ch.com/index.rdf
 http://otanew.jp/index.rdf
 http://otasoku.livedoor.biz/index.rdf
