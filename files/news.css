@@ -26,10 +26,15 @@ a:hover
 	text-decoration-color: #FFFFFF;
 }
 
+.normallink
+{
+	padding: 0.3em;
+}
+
 .normallink:hover
 {
 	text-decoration: none;
-	color: #BBDEFB;
+	color: #212121;
 	background-color: #2196F3;
 }
 

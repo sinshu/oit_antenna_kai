@@ -44,5 +44,4 @@ http://waranote.livedoor.biz/index.rdf
 http://world-fusigi.net/index.rdf
 http://www.mudainodocument.com/index.rdf
 http://www.negisoku.com/index.rdf
-http://yomosoku.com/?xml
 http://zch-vip.com/index.rdf

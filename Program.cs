@@ -29,6 +29,11 @@ namespace OitAntennaKai
             HtmlLogPage.CreateLogPage(categories);
             while (true)
             {
+                if (Setting.NetabareWarningList.Count > 0)
+                {
+                    Console.WriteLine("ネタバレ回避: " + string.Join(", ", Setting.NetabareWarningList));
+                }
+
                 var rssList = GetAllRssInfo(categories).ToList();
                 var interval = TimeSpan.FromSeconds(Setting.AccessInterval.TotalSeconds / rssList.Count);
                 Console.WriteLine("ブログ数: " + rssList.Count);

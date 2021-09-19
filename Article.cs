@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace OitAntennaKai
 {
     public class Article
     {
+        private static readonly Regex regNumber = new Regex(@"[0-9０-９]+\s?話");
+
         private Blog blog;
         private string uri;
         private DateTime date;
@@ -18,16 +21,33 @@ namespace OitAntennaKai
             this.blog = blog;
             this.uri = uri;
             this.date = date;
+            this.title = CheckTitle(title);
+
+            this.feature = new Feature(this);
+        }
+
+        private static string CheckTitle(string title)
+        {
             if (title.Length > 0)
             {
-                this.title = title;
+                foreach (var netabare in Setting.NetabareWarningList)
+                {
+                    if (title.Contains(netabare))
+                    {
+                        var number = regNumber.Match(title);
+                        if (number.Success)
+                        {
+                            return "[ネタバレ] " + netabare + " " + number.Value;
+                        }
+                    }
+                }
+
+                return title;
             }
             else
             {
-                this.title = "無題";
+                return "無題";
             }
-
-            this.feature = new Feature(this);
         }
 
         public Blog Blog

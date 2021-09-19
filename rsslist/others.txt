@@ -1,3 +1,4 @@
+http://j-seiji.blog.jp/index.rdf
 http://rssblog.ameba.jp/minusa-yorikazu/rss20.xml
 http://shin-geki.com/feed/
 https://38news.jp/feed/
