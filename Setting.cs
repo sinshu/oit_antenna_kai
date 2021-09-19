@@ -11,7 +11,7 @@ namespace OitAntennaKai
     {
         public static readonly bool UseBlogCache = false;
 
-        public static readonly string PageTitle = "OITあんてな(改)";
+        public static readonly string PageTitle = UseBlogCache ? "デバッグ中" : "OITあんてな(改)";
 
         public static readonly string RootDirectory;
         public static readonly string RssListDirectory;
