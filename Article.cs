@@ -7,7 +7,7 @@ namespace OitAntennaKai
 {
     public class Article
     {
-        private static readonly Regex regNumber = new Regex(@"[0-9０-９]+\s?話");
+        private static readonly Regex regNumber = new Regex(@"[0-9０-９]+\s?話|最終回|最終話");
 
         private Blog blog;
         private string uri;
