@@ -30,7 +30,6 @@ http://news4vip.livedoor.biz/index.rdf
 http://nyaasokuvip.net/feed/
 http://rabitsokuhou.2chblog.jp/index.rdf
 http://ryusoku.com/index.rdf
-http://squallchannel.com/index.rdf
 http://tenkomo.com/?xml
 http://totalmatomedia.blog.fc2.com/?xml
 http://usi32.com/index.rdf
