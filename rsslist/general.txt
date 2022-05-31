@@ -15,7 +15,6 @@ http://chaos2ch.com/index.rdf
 http://cherio199.blog120.fc2.com/?xml
 http://exawarosu.net/index.rdf
 http://feeds.gurum.biz/gurum/rss/
-http://fesoku.net/index.rdf
 http://ikeike2ch.jp/index.rdf
 http://inazumanews2.com/index.rdf
 http://kanasoku.info/index.rdf
