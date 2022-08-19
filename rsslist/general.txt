@@ -24,7 +24,6 @@ http://kurumachannel.com/index.rdf
 http://kyousoku.net/index.rdf
 http://majikichi.com/index.rdf
 http://michaelsan.livedoor.biz/index.rdf
-http://mindhack2ch.com/index.rdf
 http://news4vip.livedoor.biz/index.rdf
 http://nyaasokuvip.net/feed/
 http://rabitsokuhou.2chblog.jp/index.rdf
