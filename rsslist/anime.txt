@@ -5,7 +5,6 @@ http://blog.livedoor.jp/nizigami/index.rdf
 http://blog.livedoor.jp/qmanews/index.rdf
 http://blog.livedoor.jp/yuriton-garuon/index.rdf
 http://grasoku.com/index.rdf
-http://iroirosokuhou.com/index.rdf
 http://onecall2ch.com/index.rdf
 http://www.anige-sokuhouvip.com/?xml
 http://yaraon-blog.com/feed/

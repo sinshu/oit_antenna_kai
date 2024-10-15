@@ -10,7 +10,6 @@ http://blog.livedoor.jp/news23vip/index.rdf
 http://brow2ing.doorblog.jp/index.rdf
 http://chaos2ch.com/index.rdf
 http://cherio199.blog120.fc2.com/?xml
-http://exawarosu.net/index.rdf
 http://feeds.gurum.biz/gurum/rss/
 http://kanasoku.info/index.rdf
 http://kurumachannel.com/index.rdf
