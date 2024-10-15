@@ -7,8 +7,6 @@ http://blog.livedoor.jp/itsoku/index.rdf
 http://blog.livedoor.jp/jyoushiki43/index.rdf
 http://blog.livedoor.jp/nwknews/index.rdf
 http://blog.livedoor.jp/yu_ps13/index.rdf
-http://fxya.blog129.fc2.com/?xml
-http://gadgetlife2ch.blomaga.jp/index.rdf
 http://gahalog.2chblog.jp/index.rdf
 http://kuromacyo.livedoor.biz/index.rdf
 http://lifehack2ch.livedoor.biz/index.rdf

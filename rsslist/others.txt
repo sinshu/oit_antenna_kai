@@ -1,7 +1,4 @@
-http://j-seiji.blog.jp/index.rdf
-http://rssblog.ameba.jp/minusa-yorikazu/rss20.xml
-http://shin-geki.com/feed/
-https://38news.jp/feed/
-https://johosokuhou.com/feed/
-https://so-t.biz/feed/
-https://the-criterion.jp/category/mail-magazine/feed/
+http://www.jisaka.com/index.rdf
+https://zenn.dev/topics/csharp/feed
+https://zenn.dev/topics/rust/feed
+https://zenn.dev/topics/zig/feed
